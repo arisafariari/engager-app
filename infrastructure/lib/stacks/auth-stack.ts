@@ -17,6 +17,10 @@ export class AuthStack extends cdk.Stack {
         Project: 'Engager',
         ManagedBy: 'CDK'
       },
+      
+      // Add this description
+      description: 'Engager authentication user pool managed by CDK',
+
       signInAliases: {
         email: true,
         username: false,
