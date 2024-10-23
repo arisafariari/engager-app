@@ -12,15 +12,14 @@ export class AuthStack extends cdk.Stack {
     this.userPool = new cognito.UserPool(this, 'EngagerUserPool', {
       userPoolName: 'engager-user-pool',
       selfSignUpEnabled: false, // Only Engager staff can create initial users
-      userPoolTags: {
+      tags: {
         Environment: 'production',
         Project: 'Engager',
         ManagedBy: 'CDK'
       },
-      
-      // Add this description
       description: 'Engager authentication user pool managed by CDK',
-
+      
+      // ... rest of the configuration
       signInAliases: {
         email: true,
         username: false,
